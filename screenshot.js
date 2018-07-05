@@ -10,7 +10,7 @@ const path = require('path');
 
 const Screen = (FileName) =>{
   try{
-    let dp = '/Users/punchh_yogesh/Noodles/e2e/screenshots/'+d.getTime();
+    let dp = '/fullpath/e2e/screenshots/'+d.getTime();
     if(device.getPlatform() === 'ios')
     {
       // Create a folder with name as current time
@@ -25,7 +25,7 @@ const Screen = (FileName) =>{
       // Take a screenshot of android device and store in device storage
       exec(`adb shell screencap -p /sdcard/${FileName}.png`);
       sleep(1000);
-      // Pull the screenshot from device and store in local directory 
+      // Pull the screenshot from device and store in local directory
       exec(`adb pull /sdcard/${FileName}.png ${dp}`)
       sleep(1000);
     }
