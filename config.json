@@ -1,0 +1,26 @@
+{
+	"setupTestFrameworkScriptFile": "./init.js",
+	"testEnvironment": "node",
+	"preset": "react-native",
+	"setupFiles": ["./e2e/setupTests.js"],
+	"snapshotSerializers": ["enzyme-to-json/serializer"],
+	"transformIgnorePatterns": [
+		"node_modules/(?!(react-native|rn-placeholder|react-native-storage|react-native-image-crop-picker|react-native-aws3|react-native-permissions|react-native-elements|react-native-vector-icons|react-native-scrollable-tab-view)/)"
+	],
+	"collectCoverageFrom": [
+		"**/src/**/*.{js,jsx}",
+		"**/e2e/**",
+		"!**/src/**/style.js",
+		"!**/src/**/index.js",
+		"!**/src/theme/**",
+		"!**/android/**",
+		"!**/ios/**",
+		"!**/node_modules/**",
+		"!**/scripts/**",
+		"!**/__test__/**"
+	],
+	"verbose": true,
+	"testPathIgnorePatterns": ["/node_modules/"],
+	"testResultsProcessor": "jest-sonar-reporter",
+	"testURL": "http://localhost/"
+}
