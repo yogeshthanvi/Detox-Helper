@@ -19,6 +19,7 @@ subprojects {
         }
     }
 }
+
 //--Detox Configurations Android ------
 
 
