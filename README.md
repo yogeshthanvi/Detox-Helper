@@ -8,6 +8,7 @@ To run detox for android on #RN57 and #babel7 please follow the config.json conf
 Also add the following in the android > build.gradle 
 
 //Add the complileSdkVersion as 28 and buildToolVersion as 28.0.3 
+
 subprojects {
     afterEvaluate { project ->
         if (project.hasProperty("android")) {
